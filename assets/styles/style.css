@@ -43,7 +43,7 @@ body {
 main {
   max-width: 1440px;
   margin: 0 auto;
-  margin-bottom: 200px;
+  margin-bottom: 130px;
 }
 
 .section-title {
@@ -161,6 +161,25 @@ main > section {
   margin: 0;
 }
 
+.features-image {
+  position: relative;
+}
+
+.experience-badge {
+  position: absolute;
+  display: block;
+  padding: 41px 38px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: -90px;
+  margin-top: -130px;
+}
+
+#experience-year {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
 /* some facts */
 .facts-container {
   display: grid;
@@ -206,11 +225,22 @@ main > section {
   filter: grayscale(100%);
 }
 
+/* footer start */
+footer {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #fff4e7;
+  padding: 40px 0;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+}
+
 /* responsive related styled */
 @media screen and (max-width: 576px) {
   .navbar,
   .nav-links,
-  .teams {
+  .teams,
+  .features {
     flex-direction: column;
     text-align: center;
   }
@@ -221,7 +251,6 @@ main > section {
   }
 
   main > section {
-    /* margin: 0 20px; */
     margin-right: 20px;
     margin-left: 20px;
   }
@@ -242,6 +271,27 @@ main > section {
     text-align: center;
   }
 
+  .features-image {
+    position: relative;
+  }
+
+  .features-image img {
+    width: 100%;
+  }
+
+  .experience-badge {
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+
+  #experience-year {
+    font-size: 2rem;
+  }
+
   .facts-container,
   .sponsor-companies {
     gap: 24px;
@@ -255,18 +305,36 @@ main > section {
 
 /* medium size device */
 @media screen and (min-width: 576px) and (max-width: 992px) {
-  .teams {
+  .teams,
+  .features {
     flex-direction: column;
+    text-align: center;
   }
 
   .banner,
-  .navbar {
+  .navbar,
+  .features {
     margin: 0 20px;
   }
 
   .our-features {
     margin: 0;
     text-align: center;
+  }
+
+  .features-image {
+    position: relative;
+  }
+
+  .experience-badge {
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: -100px;
+  }
+
+  .features-image img {
+    width: 100%;
   }
 
   .facts-container,
